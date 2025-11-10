@@ -10,6 +10,7 @@ import Adapt.*;
 import Strategy.*;
 import Observer.*;
 import Singleton.*;
+import Visitor.*;
 
 public class Main {
     public static void main(String[] args) throws Exception {
@@ -56,8 +57,8 @@ public class Main {
         ProgramLogger.getInstance().addLoggerInfo("First log");
         ProgramLogger.getInstance().addLoggerInfo("Second log");
         ProgramLogger.getInstance().showLog();
-
-
-
+        //Visitor
+        Drive carV=new Bus();
+        carV.accept(new Pay());
     }
 }
